@@ -682,7 +682,6 @@ class DatasetAugmentGenerator:
     def image_augment(self, data, target_height, target_width):
         data2 = data.copy()
         # path new to save and save augmented image as original_name + index(i)
-        # savepath = '/home/ko_st/Documents/Dsit_Thesis/Sample_Datasets/trainimages'
         if not (os.path.exists(self.savepath)):
             os.makedirs(self.savepath)
 
