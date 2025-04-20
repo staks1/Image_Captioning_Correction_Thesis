@@ -8,6 +8,9 @@ The idea is to finetune specific layers of the 2 transformers of the CLIP multim
 <p align="center">
   <img src="preview.png" width="700"/>
 </p>
+
+
+![System Architecture](./system.png)
 ---
 
 ### 📘 View the Notebook
@@ -53,5 +56,10 @@ If you'd like to run the demo project locally:
 - Run `creating_datasets.py`
 - After that the directory structure is created and you need to copy all files from `demo_dataset` into the `src/training_and_evaluation/Datasets/original/` directory
 - Run the notebook !
+
+### Future steps
+- Add unit testing
+- Add function type hints
+- Containerize the model
 
 ``````
