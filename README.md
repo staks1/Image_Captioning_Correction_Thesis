@@ -47,19 +47,36 @@ The demo is available
 
 If you'd like to run the demo project locally:
 
-### 🐳 Using Python
+### 🐳 Running the notebook (study the whole pipeline)
 
-- Clone the repo
-- Create a python virtual environment 
-- Install the requirements
-- cd into training_and_evaluation
-- Run `creating_datasets.py`
-- After that the directory structure is created and you need to copy all files from `demo_dataset` into the `src/training_and_evaluation/Datasets/original/` directory
-- Run the notebook !
+1. Clone the repo
+2. cd into training_and_evaluation
+3. Run `creating_datasets.py`
+4. After that the directory structure is created and you need to copy all files from `demo_dataset` into the `src/training_and_evaluation/Datasets/original/` directory
+5. Create a python virtual environment 
+6. Install the requirements
+7.  Copy the `demo-notebook.ipynb` into `src/training_and_evaluation/`
+8.  Run the notebook !
+
+### Using Python (find the captions)
+- A script is available for the demo-dataset to :
+  - Calculate and save the embeddings
+  - find the captions for each image
+  - Calculate the metrics 
+
+You can again run steps `1-6` and then run
+the `inference_demo.py`. You then can inspect the embeddings and results
+inside `src/training_and_evaluation/Models/zeroshot_clip/original/...`
+
+### Using docker  (find the captions)
+To run the captioning part you can also build the image and run the container
+1. Follow steps `1-4`
+2. Run the `run_docker_captioning.sh` which will build the image run the container and create the volumes `Models` where you can inspect the embeddings and results.
+
 
 ### Future steps
-- Add unit testing
-- Add function type hints
-- Containerize the model
+- [ ] Add unit testing
+- [ ] Add function type hints
+- [X] Containerize the demo
 
 ``````
