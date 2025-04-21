@@ -243,50 +243,62 @@ def save_embeddings(data_model_code, split_path, img_emb, caption_emb):
 def load_embeddings(data_model_code, split_path, is_numpy=False):
     if data_model_code == "zo" and split_path == "test_deepl.csv":
         img_emb = torch.load(
-            os.path.join(path_to_embeddings_zo_test, "image_embeddings.pt")
+            os.path.join(path_to_embeddings_zo_test, "image_embeddings.pt"),
+            weights_only=False,
         )
         caption_emb = torch.load(
-            os.path.join(path_to_embeddings_zo_test, "caption_embeddings.pt")
+            os.path.join(path_to_embeddings_zo_test, "caption_embeddings.pt"),
+            weights_only=False,
         )
 
     # add for next models
     elif data_model_code == "plo" and split_path == "test_deepl.csv":
         img_emb = torch.load(
-            os.path.join(path_to_embeddings_plo_test, "image_embeddings.pt")
+            os.path.join(path_to_embeddings_plo_test, "image_embeddings.pt"),
+            weights_only=False,
         )
         caption_emb = torch.load(
-            os.path.join(path_to_embeddings_plo_test, "caption_embeddings.pt")
+            os.path.join(path_to_embeddings_plo_test, "caption_embeddings.pt"),
+            weights_only=False,
         )
 
     # add for next models
     elif data_model_code == "pla" and split_path == "test_deepl.csv":
         img_emb = torch.load(
-            os.path.join(path_to_embeddings_pla_test, "image_embeddings.pt")
+            os.path.join(path_to_embeddings_pla_test, "image_embeddings.pt"),
+            weights_only=False,
         )
         caption_emb = torch.load(
-            os.path.join(path_to_embeddings_pla_test, "caption_embeddings.pt")
+            os.path.join(path_to_embeddings_pla_test, "caption_embeddings.pt"),
+            weights_only=False,
         )
     # add for next models
     elif data_model_code == "tlo" and split_path == "test_deepl.csv":
         img_emb = torch.load(
-            os.path.join(path_to_embeddings_tlo_test, "image_embeddings.pt")
+            os.path.join(path_to_embeddings_tlo_test, "image_embeddings.pt"),
+            weights_only=False,
         )
         caption_emb = torch.load(
-            os.path.join(path_to_embeddings_tlo_test, "caption_embeddings.pt")
+            os.path.join(path_to_embeddings_tlo_test, "caption_embeddings.pt"),
+            weights_only=False,
         )
     elif data_model_code == "tla" and split_path == "test_deepl.csv":
         img_emb = torch.load(
-            os.path.join(path_to_embeddings_tla_test, "image_embeddings.pt")
+            os.path.join(path_to_embeddings_tla_test, "image_embeddings.pt"),
+            weights_only=False,
         )
         caption_emb = torch.load(
-            os.path.join(path_to_embeddings_tla_test, "caption_embeddings.pt")
+            os.path.join(path_to_embeddings_tla_test, "caption_embeddings.pt"),
+            weights_only=False,
         )
     elif data_model_code == "clo" and split_path == "test_deepl.csv":
         img_emb = torch.load(
-            os.path.join(path_to_embeddings_clo_test, "image_embeddings.pt")
+            os.path.join(path_to_embeddings_clo_test, "image_embeddings.pt"),
+            weights_only=False,
         )
         caption_emb = torch.load(
-            os.path.join(path_to_embeddings_clo_test, "caption_embeddings.pt")
+            os.path.join(path_to_embeddings_clo_test, "caption_embeddings.pt"),
+            weights_only=False,
         )
 
     if is_numpy == True:

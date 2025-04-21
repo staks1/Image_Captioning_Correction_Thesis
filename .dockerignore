@@ -1,0 +1,10 @@
+*.ipynb
+*.png
+*.jpg
+*.md
+.git
+.gitignore
+demo_dataset/
+*backup*
+*.yml
+*.sh
