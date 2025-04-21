@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  image_captioning:
+    build: .
+    stdin_open: true  
+    tty: true        
+    volumes: 
+      - ./Models:/industrial_captioning_app/src/training_and_evaluation/Models   
+    container_name: industrial_app
+    
